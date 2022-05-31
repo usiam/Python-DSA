@@ -26,3 +26,11 @@ C --> D
 |Week 10        |    |    |
 |Week 11       |    |    |
 |Week 12        |    |    |
+
+
+
+# Additional resources
+---
+https://neetcode.io/
+https://seanprashad.com/leetcode-patterns/
+https://leetcode.com/explore/
