@@ -32,5 +32,7 @@ C --> D
 # Additional resources
 ---
 https://neetcode.io/
+
 https://seanprashad.com/leetcode-patterns/
+
 https://leetcode.com/explore/
