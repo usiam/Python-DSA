@@ -1,5 +1,5 @@
 class ListNode:
-    def __init__(self, val: object = None, next=None, prev=None):
+    def __init__(self, val: object = None, next=None, prev=None) -> None:
         """
         Single Node Object for Linked List
          O(1)
@@ -15,7 +15,7 @@ class ListNode:
 
 
 class DoublyLinkedList:
-    def __init__(self):
+    def __init__(self) -> None:
         """
         Constructor for a doubly linked list
         O(1)
@@ -24,7 +24,7 @@ class DoublyLinkedList:
         self.tail = None
         self.length = 0
 
-    def __iter__(self):
+    def __iter__(self) -> ListNode:
         """
         Iterator to iterate over the doubly linked list
         O(n)
@@ -59,7 +59,7 @@ class DoublyLinkedList:
             value (_type_): Value to be stored in the new list node
             index (int): location of the new list node
         """
-
+        assert index >= -1, "Index cannot be less than -1"
         if not self.head:
             print("The head reference is None")
             return
@@ -151,6 +151,7 @@ class DoublyLinkedList:
         Args:
             index (int): Index of node to delete
         """
+        assert index >= -1, "Index cannot be less than -1"
         if not self.head:
             print("The head reference is None")
             return

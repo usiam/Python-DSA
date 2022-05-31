@@ -1,5 +1,5 @@
 class ListNode:
-    def __init__(self, val: object = None, next=None):
+    def __init__(self, val: object = None, next=None) -> None:
         """
         Single Node Object for Linked List
          O(1)
@@ -14,7 +14,7 @@ class ListNode:
 
 
 class SinglyLinkedList:
-    def __init__(self):
+    def __init__(self) -> None:
         """
         Constructor for a singly linked list
         O(1)
@@ -22,7 +22,7 @@ class SinglyLinkedList:
         self.head = None
         self.tail = None
 
-    def __iter__(self):
+    def __iter__(self) -> ListNode:
         """
         Iterator to iterate over the singly linked list
         O(n)
@@ -41,6 +41,7 @@ class SinglyLinkedList:
             value (_type_): Value to be stored in the new list node
             index (int): location of the new list node
         """
+        assert index >= -1, "Index cannot be less than -1"
         node = ListNode(value)
         # If linked list has no node
         if not self.head or not self.tail:
@@ -107,7 +108,7 @@ class SinglyLinkedList:
             curr = curr.next
         return False
 
-    def deleteByIndex(self, index: int):
+    def deleteByIndex(self, index: int) -> None:
         """
         Delete a node from the singly linked list at a given index
         O(n)
@@ -115,6 +116,7 @@ class SinglyLinkedList:
         Args:
             index (int): Index of node to be deleted
         """
+        assert index >= -1, "Index cannot be less than -1"
         if not self.head:
             print("Singly Linked List does not exist")
             return
@@ -167,7 +169,7 @@ class SinglyLinkedList:
             curr = curr.next
         return dummy.next
 
-    def deleteSinglyLinkedList(self):
+    def deleteSinglyLinkedList(self) -> None:
         """
         Delete the entire singly linked list
         O(1)
