@@ -36,3 +36,5 @@ https://neetcode.io/
 https://seanprashad.com/leetcode-patterns/
 
 https://leetcode.com/explore/
+
+https://www.techinterviewhandbook.org/grind75?hours=4&weeks=20&grouping=weeks&mode=preferences
