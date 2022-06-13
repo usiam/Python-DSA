@@ -24,13 +24,18 @@ class Queue:
         """
         assert not self.isFull(), "Queue is full"
 
-        # if end pointer is at the end then we change it to 0
-        if self.end + 1 == self.capacity:
+        # if enqueinng first element
+        if self.start == -1:
+            self.start = 0
             self.end = 0
+
+        # if end pointer is at the end then we change it to 0
+        elif self.end + 1 == self.capacity:
+            self.end = 0
+
         else:
             self.end += 1
-            if self.start == -1:  # if this is the first element being inserted
-                self.start = 0
+
         self.queue[self.end] = data
 
     def dequeue(self):
@@ -44,10 +49,10 @@ class Queue:
 
         deqItem = self.queue[self.start]
         start = self.start
-        if self.start + 1 == self.capacity:
-            self.start = 0
-        elif self.start == self.end:  # if this is the only item in the queue
+        if self.start == self.end:  # if this is the only item in the queue
             self.start = self.end = -1
+        elif self.start + 1 == self.capacity:  # if start is at capacity we move it back to 0
+            self.start = 0
         else:
             self.start += 1
         self.queue[start] = None
