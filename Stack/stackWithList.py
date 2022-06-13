@@ -34,7 +34,8 @@ class Stack:
         Returns:
             object: Data to be returned and removed from the top of the stack
         """
-        return self.stack.pop() if not self.isEmpty() else "No element in stack"
+        assert not self.isEmpty(), "Stack is empty"
+        return self.stack.pop()
 
     def peek(self) -> object:
         """
@@ -44,7 +45,8 @@ class Stack:
         Returns:
             object: Data to be returned from the top of the stack
         """
-        return self.stack[-1] if not self.isEmpty() else "No element in stack"
+        assert not self.isEmpty(), "Stack is empty"
+        return self.stack[-1]
 
     def isEmpty(self) -> bool:
         """
